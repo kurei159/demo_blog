@@ -12,7 +12,7 @@ guard
 guardlivereload
 
 Bulma:
-@import "bulma"; in application.scss
+- @import "bulma"; in application.scss
 
 To run guard livereload for monitoring:
 >guard init livereload
@@ -20,7 +20,10 @@ To run guard livereload for monitoring:
 
 
 * Database: Sqlite3
-Check db/migrate
+- Check db/migrate
+
+* To Check CRUD Actions:
+>rake routes
 
 * Creating new controller
 >rails new controller <name>
@@ -31,3 +34,6 @@ Check db/migrate
 * Creating new model
 > rails new model <name> <dataname: datatype>
 >rails db:migrate
+
+* When using simple form
+- Make wrapper false, as it has its own wrapper
