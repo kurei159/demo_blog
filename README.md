@@ -21,8 +21,7 @@ To run guard livereload for monitoring:
 >guard init livereload
 >bundle exec guard
 
-* When using simple form
-- Make wrapper false, as it has its own wrapper
+* When using simple form, make wrapper false, as it has its own wrapper
 
 * Database: Sqlite3
 - Check db/migrate
