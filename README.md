@@ -1,24 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version 
+ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c) [x86_64-linux]
 
-Things you may want to cover:
+* Extra gems used:
+bulma-rails
+simple forms (Run rails generate simple_form:install)
+better errors
+binding of caller
+guard
+guardlivereload
 
-* Ruby version
+Bulma:
+@import "bulma"; in application.scss
 
-* System dependencies
+To run guard livereload for monitoring:
+>guard init livereload
+>bundle exec guard
 
-* Configuration
 
-* Database creation
+* Database: Sqlite3
+Check db/migrate
 
-* Database initialization
+* Creating new controller
+>rails new controller <name>
+>create action in controller.rb
+>create page in view
+>route page
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Creating new model
+> rails new model <name> <dataname: datatype>
+>rails db:migrate
