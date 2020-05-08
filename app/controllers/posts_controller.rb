@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+before_action :find_post, only: [:show, :update, :edit, :destroy]
 
     #Action index
     def index
@@ -23,12 +24,9 @@ class PostsController < ApplicationController
     end
 
     def show
-        @post = Post.find(params[:id]) #find post by id
     end
 
     def update #Actual update
-        @post = Post.find(params[:id]) #find post by id
-
         if @post.update(post_params) #If post is updated, redirect to updated version. Else, edit
             redirect_to @post
         else
@@ -37,13 +35,10 @@ class PostsController < ApplicationController
     end
 
     def edit
-        @post = Post.find(params[:id])
     end
 
     def destroy
-        @post = Post.find(params[:id])
         @post.destroy
-
         redirect_to posts_path
     end
 
@@ -53,5 +48,8 @@ class PostsController < ApplicationController
         params.require(:post).permit(:title, :content)
     end
 
+    def find_post #Find post ID
+        @post = Post.find(params[:id])
+    end
 
 end

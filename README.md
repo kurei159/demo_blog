@@ -4,12 +4,12 @@
 ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c) [x86_64-linux]
 
 * Extra gems used:
-bulma-rails
-simple forms (Run rails generate simple_form:install)
-better errors
-binding of caller
-guard
-guardlivereload
+- bulma-rails
+- simple forms (Run rails generate simple_form:install)
+- better errors
+- binding of caller
+- guard
+- guardlivereload
 
 Bulma:
 - @import "bulma"; in application.scss
@@ -18,6 +18,8 @@ To run guard livereload for monitoring:
 >guard init livereload
 >bundle exec guard
 
+* When using simple form
+- Make wrapper false, as it has its own wrapper
 
 * Database: Sqlite3
 - Check db/migrate
@@ -32,8 +34,9 @@ To run guard livereload for monitoring:
 >route page
 
 * Creating new model
-> rails new model <name> <dataname: datatype>
+>rails new model <name> <dataname: datatype>
 >rails db:migrate
 
-* When using simple form
-- Make wrapper false, as it has its own wrapper
+* Relations
+- In post.rb and comment.rb model
+
